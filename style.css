@@ -1,0 +1,1154 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Archivo+Black&family=Bungee&family=Changa+One:ital@0;1&family=Imperial+Script&family=Krona+One&family=Miniver&family=Momo+Trust+Display&family=Oswald:wght@200..700&family=Outfit:wght@100..900&family=Parisienne&family=Poppins:ital,wght@0,100;0,500;1,300;1,400;1,500&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik+Spray+Paint&family=Russo+One&family=SN+Pro:ital,wght@0,200..900;1,200..900&family=Sen:wght@400..800&family=Sigmar&family=Zen+Dots&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background-color: rgb(22, 21, 21);
+}
+
+body.no-scroll {
+    overflow: hidden;
+}
+
+html,
+body {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    height: 100%;
+}
+
+.google {
+    display: none;
+    align-items: center;
+    gap: 5px;
+    background-color: aliceblue;
+    padding: 4px;
+    border-radius: 30px;
+    width: auto;
+    font-family: "SN Pro", sans-serif;
+}
+
+.google p {
+    margin-right: 5px;
+}
+
+.google img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.eme {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    z-index: 200000;
+    visibility: hidden;
+    opacity: 0;
+    transition: transform 0.1s ease-in-out, opacity 0.1s ease-in-out, visibility 01s;
+}
+
+.eme.shows {
+    visibility: visible;
+    opacity: 1;
+    transition: transform 0.1s ease-in-out, opacity 0.1s ease-in-out, visibility 0.1s;
+}
+
+.jokes {
+    background-color: rgb(32, 32, 32);
+    width: 80vw;
+    height: 90vh;
+    overflow-y: auto;
+    border-radius: 20px;
+    padding: 1rem;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    scrollbar-width: none;
+}
+
+.jokes img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+
+#list {
+    position: absolute;
+    background-color: rgb(26, 26, 26);
+    top: 140%;
+    padding: 1rem;
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: auto;
+}
+
+#list li {
+    display: flex;
+    gap: 10px;
+}
+
+#list li img {
+    height: 90px;
+    border-radius: 10px;
+}
+
+#list div h1 {
+    font-family: "SN Pro", sans-serif;
+    font-size: 1rem;
+}
+
+#list div p {
+    font-family: "SN Pro", sans-serif;
+}
+
+header {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.382);
+    backdrop-filter: blur(30px);
+    z-index: 1000;
+    animation: fadedown 0.5s ease-out forwards;
+}
+
+.aside {
+    display: none;
+}
+
+.headbod {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    padding: 1rem;
+}
+
+.logo-head {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.headbod .logo-head svg {
+    color: white;
+    display: none;
+}
+
+.logo {
+    color: white;
+    font-weight: 700;
+    font-size: clamp(1.3rem, 5vw, 1.8rem);
+    font-family: "Russo One", sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.logo span {
+    color: rgb(255, 204, 50);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    position: relative;
+}
+
+nav svg {
+    background-color: rgba(240, 248, 255, 0.197);
+    backdrop-filter: blur(40px);
+    padding: 5px;
+    border-radius: 20%;
+    color: white;
+}
+
+nav input {
+    border-radius: 30px;
+    background-color: rgba(240, 248, 255, 0.197);
+    backdrop-filter: blur(40px);
+    border: none;
+    padding: 10px;
+    color: white;
+    outline: none;
+    width: 500px;
+}
+
+input::placeholder {
+    color: rgb(195, 195, 195);
+    opacity: 1;
+    /* Para sa Firefox */
+}
+
+
+
+/* First Section */
+#section-con {
+    height: 600px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.sec-body {
+    width: 60%;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 900px;
+    max-width: 100%;
+}
+
+.content button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 1rem;
+    width: 160px;
+    border-radius: 30px;
+    background: rgba(240, 248, 255, 0.175);
+    backdrop-filter: blur(40px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.content h1 {
+    font-size: clamp(30px, 5vw, 3rem);
+    font-family: "Russo One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    letter-spacing: 0.1rem;
+}
+
+.content p {
+    font-family: "SN Pro", sans-serif;
+    color: rgb(177, 177, 177);
+    line-height: 1.6rem;
+}
+
+.buttons {
+    width: auto;
+    display: flex;
+    gap: 10px;
+}
+
+.content .buttons button:nth-child(1) {
+    padding: 1rem;
+    width: 160px;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    background-color: rgb(255, 204, 50);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+
+.content .buttons button:nth-child(2) {
+    padding: 1rem;
+    width: 160px;
+    border-radius: 30px;
+    background: rgba(240, 248, 255, 0.175);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+/* Second section */
+.section-seco {
+    height: 600px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+}
+
+.secobod {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.secoti {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.secoti span {
+    height: 30px;
+    width: 5px;
+    background-color: rgb(255, 204, 50);
+    border-radius: 10px;
+}
+
+.secoti h1 {
+    font-family: "Russo One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.4rem;
+    color: rgb(226, 226, 226);
+    letter-spacing: 0.1rem;
+}
+
+#videos {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.vid-body {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.vid-body span {
+    position: absolute;
+
+}
+
+.vid-body span svg {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.447);
+    padding: 1rem;
+    border-radius: 50%;
+}
+
+.vidimg img {
+    width: 250px !important;
+    height: 300px !important;
+    border-radius: 15px;
+}
+
+.vidcontent {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.vidcontent h4 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.vidcontent p {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Section Third */
+.thir-sec {
+    height: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+}
+
+#videothir {
+    display: flex;
+    overflow-x: auto;
+    scrollbar-width: none;
+    gap: 15px;
+}
+
+.thirbody {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    overflow-x: hidden;
+}
+
+
+.tirvidimg img {
+    width: 250px !important;
+    height: 300px !important;
+    border-radius: 15px;
+}
+
+.thirti {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.thirti span {
+    height: 30px;
+    width: 5px;
+    background-color: rgb(255, 204, 50);
+    border-radius: 10px;
+}
+
+.thirti h1 {
+    font-family: "Russo One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.4rem;
+    color: rgb(226, 226, 226);
+    letter-spacing: 0.1rem;
+}
+
+.thirti p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 200;
+    color: white;
+}
+
+.thir-body {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.thir-body span {
+    position: absolute;
+}
+
+.thir-body span svg {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.447);
+    padding: 1rem;
+    border-radius: 50%;
+}
+
+.thirvicon {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.thirvicon h4,
+p {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* slider */
+.slider {
+    position: absolute;
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.slider svg {
+    color: rgb(255, 255, 255);
+    padding: 5px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.263);
+}
+
+/* footer */
+/* ROOT COLORS PARA MADALING BAGUHIN */
+:root {
+    --primary-color: #ffcc32;
+    /* Yung gold sa UI mo */
+    --bg-dark: #0a0a0a;
+    --text-gray: #a0a0a0;
+    --glass: rgba(255, 255, 255, 0.03);
+}
+
+.main-footer {
+    background-color: var(--bg-dark);
+    padding: 80px 0 20px 0;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 50px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    /* FLEX STRAT */
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 0 20px;
+}
+
+/* BRAND SECTION */
+.footer-brand {
+    flex: 1.5;
+    /* Mas malapad ang brand section */
+    min-width: 300px;
+    margin-bottom: 40px;
+}
+
+.footer-brand .logo {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.footer-brand .logo span {
+    color: var(--primary-color);
+}
+
+.brand-text {
+    color: var(--text-gray);
+    line-height: 1.8;
+    max-width: 400px;
+    font-size: 0.95rem;
+}
+
+/* LINKS WRAPPER */
+.footer-links-wrapper {
+    flex: 2;
+    display: flex;
+    /* FLEX DIN DITO */
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.link-group {
+    display: flex;
+    flex-direction: column;
+    /* PANTAY PABABA */
+}
+
+.link-group h3 {
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+/* YUNG LINE SA ILALIM NG HEADER */
+.link-group h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 30px;
+    height: 2px;
+    background: var(--primary-color);
+}
+
+.link-group ul {
+    list-style: none;
+    padding: 0;
+}
+
+.link-group ul li {
+    margin-bottom: 15px;
+}
+
+.link-group ul li a {
+    text-decoration: none;
+    color: var(--text-gray);
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+/* HOVER EFFECT NA MAANGAS */
+.link-group ul li a:hover {
+    color: var(--primary-color);
+    padding-left: 8px;
+    text-shadow: 0 0 10px rgba(255, 204, 50, 0.5);
+}
+
+/* SOCIAL ICONS */
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.social-icons a {
+    width: 40px;
+    height: 40px;
+    background: var(--glass);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    color: #fff;
+    transition: 0.3s;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.social-icons a:hover {
+    background: var(--primary-color);
+    color: #000;
+    transform: translateY(-5px);
+}
+
+/* BOTTOM SECTION */
+.footer-bottom {
+    text-align: center;
+    margin-top: 60px;
+    padding-top: 25px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-bottom p {
+    color: #555;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+    }
+
+    .footer-links-wrapper {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .link-group {
+        min-width: 120px;
+        margin-bottom: 30px;
+    }
+}
+
+@keyframes fadeup {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadedown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 456px) {
+    .google {
+        display: flex;
+    }
+
+    .logo-head {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .headbod {
+        flex-direction: column;
+        gap: 6px;
+        padding: 1rem;
+        width: 100%;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    nav input {
+        width: 100%;
+    }
+
+    .headbod .logo-head svg {
+        color: white;
+        display: flex;
+    }
+
+    .aside {
+        display: flex;
+        position: absolute;
+        top: 110%;
+        width: 90%;
+        height: auto;
+        background-color: rgb(26, 26, 26);
+        z-index: 10000;
+        transform: translateX(-100%);
+        visibility: hidden;
+        opacity: 0;
+        transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out, visibility 0.2s;
+        border-radius: 20PX;
+        padding: 0.5rem;
+    }
+
+    .aside.active {
+        transform: translateX(0);
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .aside ul {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        gap: 15px;
+        width: 90%;
+    }
+
+    .aside ul li {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .aside ul li:hover {
+        background-color: rgb(35, 35, 35);
+        border-radius: 20px;
+    }
+
+    .aside ul li a {
+        text-decoration: none;
+        color: white;
+        font-family: "Outfit", sans-serif;
+    }
+
+    #section-con {
+        height: auto;
+        padding-top: 10rem;
+        padding-bottom: 2rem;
+    }
+
+    .sec-body,
+    .thirbody {
+        width: 90% !important;
+    }
+
+    .secobod {
+        width: 90% !important;
+    }
+
+    .content button {
+        padding: 0.5rem;
+        width: 130px;
+    }
+
+    .content .buttons button:nth-child(1) {
+        padding: 0.5rem;
+        width: 130px;
+    }
+
+    .content .buttons button:nth-child(2) {
+        padding: 0.5rem;
+        width: 130px;
+
+    }
+
+    .section-seco,
+    .thir-sec {
+        height: auto;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+    .logo-head {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .headbod {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    nav input {
+        width: 100%;
+    }
+
+    .headbod .logo-head svg {
+        color: white;
+        display: flex;
+    }
+
+    .aside {
+        display: flex;
+        position: absolute;
+        top: 110%;
+        width: 90%;
+        height: auto;
+        background-color: rgb(26, 26, 26);
+        z-index: 10000;
+        transform: translateX(-100%);
+        visibility: hidden;
+        opacity: 0;
+        transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out, visibility 0.5s;
+        border-radius: 20PX;
+        padding: 0.5rem;
+    }
+
+    .aside.active {
+        transform: translateX(0);
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .aside ul {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        gap: 15px;
+        width: 90%;
+    }
+
+    .aside ul li {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .aside ul li:hover {
+        background-color: rgb(35, 35, 35);
+        border-radius: 20px;
+    }
+
+    .aside ul li a {
+        text-decoration: none;
+        color: white;
+        font-family: "Outfit", sans-serif;
+    }
+
+    #section-con {
+        height: auto;
+        padding-top: 10rem;
+        padding-bottom: 2rem;
+    }
+
+    .sec-body,
+    .thirbody {
+        width: 90% !important;
+    }
+
+    .secobod {
+        width: 90% !important;
+    }
+
+    .content {
+        width: auto !important;
+    }
+
+    .content button {
+        padding: 0.7rem;
+
+    }
+
+    .content .buttons button:nth-child(1) {
+        padding: 0.7rem;
+
+    }
+
+    .content .buttons button:nth-child(2) {
+        padding: 0.7rem;
+
+    }
+
+    .section-seco,
+    .thir-sec {
+        height: auto;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+}
+
+
+
+
+
+@media (max-width: 1024px) {
+    .google {
+        display: flex;
+    }
+
+    .logo-head {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .headbod {
+        flex-direction: column;
+        gap: 6px;
+        padding: 0.8rem;
+        width: 100%;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    nav input {
+        width: 100%;
+    }
+
+    .headbod .logo-head svg {
+        color: white;
+        display: flex;
+    }
+
+    .aside {
+        display: flex;
+        position: absolute;
+        top: 110%;
+        width: 90%;
+        height: auto;
+        background-color: rgb(26, 26, 26);
+        z-index: 10000;
+        transform: translateX(-100%);
+        visibility: hidden;
+        opacity: 0;
+        transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out, visibility 0.5s;
+        border-radius: 20PX;
+        padding: 0.5rem;
+    }
+
+    .aside.active {
+        transform: translateX(0);
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .aside ul {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        gap: 15px;
+        width: 90%;
+    }
+
+    .aside ul li {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .aside ul li:hover {
+        background-color: rgb(35, 35, 35);
+        border-radius: 20px;
+    }
+
+    .aside ul li a {
+        text-decoration: none;
+        color: white;
+        font-family: "Outfit", sans-serif;
+    }
+
+    #section-con {
+        height: auto;
+        padding-top: 10rem;
+        padding-bottom: 2rem;
+    }
+
+    .sec-body,
+    .thirbody {
+        width: 95%;
+    }
+
+    .secobod {
+        width: 95%;
+    }
+
+    .content {
+        width: 60%;
+    }
+
+    .content button {
+        padding: 0.7rem;
+
+    }
+
+    .content .buttons button:nth-child(1) {
+        padding: 0.7rem;
+
+    }
+
+    .content .buttons button:nth-child(2) {
+        padding: 0.7rem;
+
+    }
+
+    .section-seco,
+    .thir-sec {
+        height: auto;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+}
+
+
+
+
+@media (max-width: 1169px) {
+    .google {
+        display: flex;
+    }
+
+    .logo-head {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .headbod {
+        flex-direction: column;
+        gap: 6px;
+        padding: 0.8rem;
+        width: 100%;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    nav input {
+        width: 100%;
+    }
+
+    .headbod .logo-head svg {
+        color: white;
+        display: flex;
+    }
+
+    .aside {
+        display: flex;
+        position: absolute;
+        top: 110%;
+        width: 90%;
+        height: auto;
+        background-color: rgb(26, 26, 26);
+        z-index: 10000;
+        transform: translateX(-100%);
+        visibility: hidden;
+        opacity: 0;
+        transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out, visibility 0.5s;
+        border-radius: 20PX;
+        padding: 0.5rem;
+    }
+
+    .aside.active {
+        transform: translateX(0);
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .aside ul {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        gap: 15px;
+        width: 90%;
+    }
+
+    .aside ul li {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .aside ul li:hover {
+        background-color: rgb(35, 35, 35);
+        border-radius: 20px;
+    }
+
+    .aside ul li a {
+        text-decoration: none;
+        color: white;
+        font-family: "Outfit", sans-serif;
+    }
+
+    #section-con {
+        height: auto;
+        padding-top: 10rem;
+        padding-bottom: 2rem;
+    }
+
+    .sec-body,
+    .thirbody {
+        width: 95%;
+    }
+
+    .secobod {
+        width: 95%;
+    }
+
+    .content {
+        width: 60%;
+    }
+
+    .content button {
+        padding: 0.7rem;
+
+    }
+
+    .content .buttons button:nth-child(1) {
+        padding: 0.7rem;
+
+    }
+
+    .content .buttons button:nth-child(2) {
+        padding: 0.7rem;
+
+    }
+
+    .section-seco,
+    .thir-sec {
+        height: auto;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+}
