@@ -91,7 +91,7 @@ function displayanime(index) {
     imgPreloader.onload = () => {
         document.getElementById('title').innerText = animechar.title;
         document.getElementById('para').innerText = animechar.synopsis ? animechar.synopsis.slice(0, 300) + "..." : "No description available.";
-        bgContainer.style.backgroundImage = `linear-gradient(to left, rgba(0, 0, 0, 0.29), rgba(0, 0, 0, 0.9)), url('${imageUrl}')`;
+        bgContainer.style.backgroundImage = `linear-gradient(to left, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 7)), url('${imageUrl}')`;
         setTimeout(() => {
             bgContainer.classList.remove('loading-blur');
         }, 300);
