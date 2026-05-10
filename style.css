@@ -284,7 +284,7 @@ input::placeholder {
     width: 160px;
     border-radius: 30px;
     background: rgba(240, 248, 255, 0.175);
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(40px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     color: white;
 }
@@ -420,6 +420,10 @@ input::placeholder {
     gap: 10px;
 }
 
+.thirti strong {
+    color: #ffcc32;
+}
+
 .thirti span {
     height: 30px;
     width: 5px;
@@ -494,10 +498,8 @@ p {
 }
 
 /* footer */
-/* ROOT COLORS PARA MADALING BAGUHIN */
 :root {
     --primary-color: #ffcc32;
-    /* Yung gold sa UI mo */
     --bg-dark: #0a0a0a;
     --text-gray: #a0a0a0;
     --glass: rgba(255, 255, 255, 0.03);
@@ -521,16 +523,14 @@ p {
     padding: 0 20px;
 }
 
-/* BRAND SECTION */
 .footer-brand {
     flex: 1.5;
-    /* Mas malapad ang brand section */
     min-width: 300px;
     margin-bottom: 40px;
 }
 
 .footer-brand .logo {
-    font-size: 2rem;
+    font-size: clamp(1.2rem, 5vw, 2rem);
     font-weight: 800;
     color: #fff;
     text-transform: uppercase;
@@ -549,11 +549,9 @@ p {
     font-size: 0.95rem;
 }
 
-/* LINKS WRAPPER */
 .footer-links-wrapper {
     flex: 2;
     display: flex;
-    /* FLEX DIN DITO */
     justify-content: space-between;
     gap: 20px;
 }
@@ -561,7 +559,6 @@ p {
 .link-group {
     display: flex;
     flex-direction: column;
-    /* PANTAY PABABA */
 }
 
 .link-group h3 {
@@ -572,7 +569,6 @@ p {
     position: relative;
 }
 
-/* YUNG LINE SA ILALIM NG HEADER */
 .link-group h3::after {
     content: '';
     position: absolute;
@@ -599,14 +595,12 @@ p {
     transition: all 0.3s ease;
 }
 
-/* HOVER EFFECT NA MAANGAS */
 .link-group ul li a:hover {
     color: var(--primary-color);
     padding-left: 8px;
     text-shadow: 0 0 10px rgba(255, 204, 50, 0.5);
 }
 
-/* SOCIAL ICONS */
 .social-icons {
     display: flex;
     gap: 15px;
@@ -632,7 +626,6 @@ p {
     transform: translateY(-5px);
 }
 
-/* BOTTOM SECTION */
 .footer-bottom {
     text-align: center;
     margin-top: 60px;
@@ -781,26 +774,48 @@ p {
     }
 
     .content button {
-        padding: 0.5rem;
+        padding: 0.7rem !important;
         width: 120px;
     }
 
     .content .buttons button:nth-child(1) {
-        padding: 0.4rem;
+        padding: 0.7rem !important;
         width: 120px;
     }
 
     .content .buttons button:nth-child(2) {
-        padding: 0.4rem;
+        padding: 0.7rem !important;
         width: 120px;
 
     }
 
-    .section-seco,
-    .thir-sec {
+    .section-seco {
         height: auto;
         padding-top: 3rem;
         padding-bottom: 3rem;
+    }
+
+    .vid-body {
+        height: auto !important;
+    }
+
+    .vid-body img {
+        width: 200px !important;
+        height: 260px !important;
+    }
+
+    .thir-sec {
+        padding-top: 0 !important;
+        height: auto;
+    }
+
+    .thir-body img {
+        width: 200px !important;
+        height: 260px !important;
+    }
+
+    .main-footer {
+        margin-top: 0;
     }
 
 }

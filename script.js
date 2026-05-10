@@ -74,7 +74,7 @@ async function getalldataanime() {
         displayanime(currentanimelist)
 
         document.getElementById('list').style.display = 'none';
-
+        console.log(result.data)
     } catch (error) {
         console.error(error)
     }
@@ -90,8 +90,8 @@ function displayanime(index) {
     bgContainer.classList.add('loading-blur');
     imgPreloader.onload = () => {
         document.getElementById('title').innerText = animechar.title;
-        document.getElementById('para').innerText = animechar.synopsis ? animechar.synopsis.slice(0, 300) + "..." : "No description available.";
-        bgContainer.style.backgroundImage = `linear-gradient(to left, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 7)), url('${imageUrl}')`;
+        document.getElementById('para').innerText = animechar.synopsis ? animechar.synopsis.slice(0, 180) + "..." : "No description available.";
+        bgContainer.style.backgroundImage = `linear-gradient(to left, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 6)), url('${imageUrl}')`;
         setTimeout(() => {
             bgContainer.classList.remove('loading-blur');
         }, 300);
